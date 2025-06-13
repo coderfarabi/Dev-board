@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevBoard</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
+
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
@@ -19,12 +19,13 @@
         --color-my-fev: #3752fd;
       }
     </style>
+    <script src="/script/" ></script>
   </head>
-  <body class="bg-my-white p-6 px-32 text-my-text">
+  <body class="bg-my-white p-6 text-my-text">
     <div class="space-y-5">
       <header class="bg-white p-5 rounded-lg">
         <nav class="flex items-center justify-between space-x-2">
-          <div class="flex items-center space-x-1" role="button">
+          <div class="flex items-center space-x-1">
             <img src="/assets/logo.png" alt="" />
             <p class="text-2xl">Dev<span class="font-bold">Board</span></p>
           </div>
@@ -38,10 +39,14 @@
         </nav>
       </header>
 
-      <main class="flex">
-        <section class="bg-white p-5 rounded-lg content-between space-y-5">
+      <main
+        class="grid grid-rows-none sm:grid-cols-4 space-y-5 space-x-0 sm:space-x-5"
+      >
+        <article
+          class="sm:col-span-3 bg-white p-5 rounded-lg content-between space-y-5"
+        >
           <section
-            class="grid grid-flow-row grid-cols-4 items-center justify-between space-x-2"
+            class="grid grid-rows-2 md:grid-rows-none grid-cols-4 justify-between space-x-2"
           >
             <div
               class="flex items-center justify-center p-5 bg-my-white rounded-lg space-x-2"
@@ -55,7 +60,6 @@
               </div>
             </div>
             <div
-              role="button"
               class="flex col-span-2 items-center p-5 rounded-lg space-x-2 justify-center bg-my-fev"
             >
               <img src="/assets/board.png" alt="" />
@@ -71,7 +75,9 @@
               <p>Wed ,<br />Jul 28 2025</p>
             </div>
           </section>
-          <section class="grid grid-flow-row grid-cols-3 gap-4">
+          <section
+            class="grid grid-flow-row xl:grid-cols-3 lg:grid-cols-2 gap-4"
+          >
             <!-- card 1 -->
             <div class="bg-my-white rounded-lg overflow-hidden">
               <div class="p-6 space-y-2">
@@ -85,7 +91,7 @@
                     style="
                       /* width: 200px; */
                       display: -webkit-box;
-                      -webkit-line-clamp: 2 ;
+                      -webkit-line-clamp: 2;
                       -webkit-box-orient: vertical;
                       overflow: hidden;
                       text-overflow: ellipsis;
@@ -102,132 +108,118 @@
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info ">Completed</button>
+                  <button class="btn btn-info">Completed</button>
                 </div>
               </div>
             </div>
             <!-- card 2 -->
             <div class="bg-my-white rounded-lg overflow-hidden">
               <div class="p-6 space-y-2">
-                <div class="badge bg-white">ShopEase</div>
-                <h2 class="text-xl text-gray-800 mb-2">
-                  Fix Mobile Button Issue
-                </h2>
+                <div class="badge bg-white">CloudSync</div>
+                <h2 class="text-xl text-gray-800 mb-2">Add Dark Mode</h2>
                 <div class="text-sm bg-white p-2 rounded-lg">
                   <p
                     class=""
                     style="
                       /* width: 200px; */
                       display: -webkit-box;
-                      -webkit-line-clamp: 2 ;
+                      -webkit-line-clamp: 2;
                       -webkit-box-orient: vertical;
                       overflow: hidden;
                       text-overflow: ellipsis;
                     "
                   >
-                    Debug using Chrome DevTools, check for overlapping elements,
-                    and ensure onClick works properly and ensure onClick works
-                    properly
+                    Store the user's preference in localStorage, update CSS
+                    variables dynamically, and apply a smooth transition effect.
                   </p>
                 </div>
                 <div class="pt-0.5 bg-my-fev rounded"></div>
 
-                
                 <div class="flex justify-between items-center">
                   <div class="">
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info ">Completed</button>
+                  <button class="btn btn-info">Completed</button>
                 </div>
               </div>
             </div>
             <!-- card 3 -->
             <div class="bg-my-white rounded-lg overflow-hidden">
               <div class="p-6 space-y-2">
-                <div class="badge bg-white">ShopEase</div>
-                <h2 class="text-xl text-gray-800 mb-2">
-                  Fix Mobile Button Issue
-                </h2>
+                <div class="badge bg-white">SwiftPay</div>
+                <h2 class="text-xl text-gray-800 mb-2">Optimize Home page </h2>
                 <div class="text-sm bg-white p-2 rounded-lg">
                   <p
                     class=""
                     style="
                       /* width: 200px; */
                       display: -webkit-box;
-                      -webkit-line-clamp: 2 ;
+                      -webkit-line-clamp: 2;
                       -webkit-box-orient: vertical;
                       overflow: hidden;
                       text-overflow: ellipsis;
                     "
                   >
                     Debug using Chrome DevTools, check for overlapping elements,
-                    and ensure onClick works properly and ensure onClick works
-                    properly
+                    and ensure onClick works properly
                   </p>
                 </div>
                 <div class="pt-0.5 bg-my-fev rounded"></div>
 
-                
                 <div class="flex justify-between items-center">
                   <div class="">
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info ">Completed</button>
+                  <button class="btn btn-info">Completed</button>
                 </div>
               </div>
             </div>
             <!-- card 4 -->
             <div class="bg-my-white rounded-lg overflow-hidden">
               <div class="p-6 space-y-2">
-                <div class="badge bg-white">ShopEase</div>
-                <h2 class="text-xl text-gray-800 mb-2">
-                  Fix Mobile Button Issue
-                </h2>
+                <div class="badge bg-white">Meta</div>
+                <h2 class="text-xl text-gray-800 mb-2">Add new emoji 🤲</h2>
                 <div class="text-sm bg-white p-2 rounded-lg">
                   <p
                     class=""
                     style="
                       /* width: 200px; */
                       display: -webkit-box;
-                      -webkit-line-clamp: 2 ;
+                      -webkit-line-clamp: 2;
                       -webkit-box-orient: vertical;
                       overflow: hidden;
                       text-overflow: ellipsis;
                     "
                   >
                     Debug using Chrome DevTools, check for overlapping elements,
-                    and ensure onClick works properly and ensure onClick works
-                    properly
+                    and ensure onClick works properly
                   </p>
                 </div>
                 <div class="pt-0.5 bg-my-fev rounded"></div>
 
-                
                 <div class="flex justify-between items-center">
                   <div class="">
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info ">Completed</button>
+                  <button class="btn btn-info">Completed</button>
                 </div>
               </div>
             </div>
             <!-- card 5 -->
             <div class="bg-my-white rounded-lg overflow-hidden">
               <div class="p-6 space-y-2">
-                <div class="badge bg-white">ShopEase</div>
-                <h2 class="text-xl text-gray-800 mb-2">
-                  Fix Mobile Button Issue
-                </h2>
+                <div class="badge bg-white">Google LLC</div>
+                <h2 class="text-xl text-gray-800 mb-2">Integrate OpenAI API</h2>
                 <div class="text-sm bg-white p-2 rounded-lg">
                   <p
                     class=""
                     style="
                       /* width: 200px; */
                       display: -webkit-box;
-                      -webkit-line-clamp: 2 ;
+                      -webkit-line-clamp: 2;
                       -webkit-box-orient: vertical;
                       overflow: hidden;
                       text-overflow: ellipsis;
@@ -240,22 +232,21 @@
                 </div>
                 <div class="pt-0.5 bg-my-fev rounded"></div>
 
-                
                 <div class="flex justify-between items-center">
                   <div class="">
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info ">Completed</button>
+                  <button class="btn btn-info">Completed</button>
                 </div>
               </div>
             </div>
             <!-- card 6 -->
             <div class="bg-my-white rounded-lg overflow-hidden">
               <div class="p-6 space-y-2">
-                <div class="badge bg-white">ShopEase</div>
+                <div class="badge bg-white">Glassdoar</div>
                 <h2 class="text-xl text-gray-800 mb-2">
-                  Fix Mobile Button Issue
+                  Improve Job searching
                 </h2>
                 <div class="text-sm bg-white p-2 rounded-lg">
                   <p
@@ -263,7 +254,7 @@
                     style="
                       /* width: 200px; */
                       display: -webkit-box;
-                      -webkit-line-clamp: 2 ;
+                      -webkit-line-clamp: 2;
                       -webkit-box-orient: vertical;
                       overflow: hidden;
                       text-overflow: ellipsis;
@@ -276,23 +267,39 @@
                 </div>
                 <div class="pt-0.5 bg-my-fev rounded"></div>
 
-                
                 <div class="flex justify-between items-center">
                   <div class="">
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info ">Completed</button>
+                  <button class="btn btn-info">Completed</button>
                 </div>
               </div>
             </div>
-
           </section>
-        </section>
-        <section class="bg-white"></section>
+        </article>
+        <aside
+          class="bg-white p-5 rounded-lg content-between space-y-5 justify-center"
+        >
+          <div class="justify-self-center space-y-2">
+            <div class="flex items-center justify-center space-x-2">
+              <img src="/assets/activity.png" alt="" />
+              <p>Activity Log</p>
+            </div>
+            <button class="btn btn-info">Clear History</button>
+          </div>
+
+          <div class="pt-0.5 bg-my-fev rounded"></div>
+          <div class="space-y-2">
+            <p class="bg-my-white p-2 rounded text-sm">
+              You have Complete The Task Add Dark Mode at 12:48:15 PM
+            </p>
+            <p class="bg-my-white p-2 rounded text-sm">
+              You have Complete The Task Add Dark Mode at 12:48:15 PM
+            </p>
+          </div>
+        </aside>
       </main>
-      
     </div>
-    
   </body>
 </html>
