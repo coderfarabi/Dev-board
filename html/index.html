@@ -12,6 +12,7 @@
       type="text/css"
     />
     <script src="/script/tailwind.config.js"></script>
+    <script src="/utilities/utilities.js"></script>
     <style type="text/tailwindcss">
       @theme {
         --color-my-white: #f4f7ff;
@@ -19,7 +20,7 @@
         --color-my-fev: #3752fd;
       }
     </style>
-    <script src="/script/" ></script>
+    <script src="/script/index.js" ></script>
   </head>
   <body class="bg-my-white p-6 text-my-text">
     <div class="space-y-5">
@@ -72,7 +73,7 @@
               class="flex items-center justify-center p-5 bg-my-white rounded-lg space-x-2"
             >
               <img src="/assets/calender.png" alt="" />
-              <p>Wed ,<br />Jul 28 2025</p>
+              <span id="liveTime" >Wed Jul 28 2025</span>
             </div>
           </section>
           <section
