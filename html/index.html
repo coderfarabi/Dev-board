@@ -12,28 +12,29 @@
       type="text/css"
     />
     <script src="/script/tailwind.config.js"></script>
+    <script src="/script/index.js"></script>
     <script src="/utilities/utilities.js"></script>
+    <script src="/script/real-time.js"></script>
     <style type="text/tailwindcss">
       @theme {
         --color-my-white: #f4f7ff;
         --color-my-text: #00303c;
         --color-my-fev: #3752fd;
-      }
+    }
     </style>
-    <script src="/script/index.js" ></script>
   </head>
   <body class="bg-my-white p-6 text-my-text">
     <div class="space-y-5">
       <header class="bg-white p-5 rounded-lg">
         <nav class="flex items-center justify-between space-x-2">
-          <div class="flex items-center space-x-1">
+          <div id="brand-logo" class="flex items-center space-x-1">
             <img src="/assets/logo.png" alt="" />
             <p class="text-2xl">Dev<span class="font-bold">Board</span></p>
           </div>
           <div class="flex items-center space-x-2">
             <div class="flex items-center space-x-1 bg-my-white p-2 rounded-md">
               <img src="/assets/checkbox.png" alt="" />
-              <p>23</p>
+              <p id="task_completed">23</p>
             </div>
             <div><img src="/assets/theme-btn.png" alt="" /></div>
           </div>
@@ -50,17 +51,18 @@
             class="grid grid-rows-2 md:grid-rows-none grid-cols-4 justify-between space-x-2"
           >
             <div
-              class="flex items-center justify-center p-5 bg-my-white rounded-lg space-x-2"
+              class="flex sm:flex-col items-center justify-center p-5 bg-my-white rounded-lg space-x-2"
             >
               <div class="bg-white p-3 rounded-full">
                 <img src="/assets/checkbox.png" alt="" />
               </div>
               <div>
                 <p class="text-xs">Task Assigned</p>
-                <p class="font-bold text-xl">05</p>
+                <p id="task_assigned" class="font-bold text-xl">6</p>
               </div>
             </div>
             <div
+              id="discover-today"
               class="flex col-span-2 items-center p-5 rounded-lg space-x-2 justify-center bg-my-fev"
             >
               <img src="/assets/board.png" alt="" />
@@ -73,14 +75,14 @@
               class="flex items-center justify-center p-5 bg-my-white rounded-lg space-x-2"
             >
               <img src="/assets/calender.png" alt="" />
-              <span id="liveTime" >Wed Jul 28 2025</span>
+              <span id="liveTime">Wed Jul 28 2025</span>
             </div>
           </section>
           <section
             class="grid grid-flow-row xl:grid-cols-3 lg:grid-cols-2 gap-4"
           >
             <!-- card 1 -->
-            <div class="bg-my-white rounded-lg overflow-hidden">
+            <div class="bg-my-white rounded-lg overflow-hidden task_card">
               <div class="p-6 space-y-2">
                 <div class="badge bg-white">ShopEase</div>
                 <h2 class="text-xl text-gray-800 mb-2">
@@ -109,12 +111,12 @@
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info">Completed</button>
+                  <button class="btn btn-info completed-button disabled">Completed</button>
                 </div>
               </div>
             </div>
             <!-- card 2 -->
-            <div class="bg-my-white rounded-lg overflow-hidden">
+            <div class="bg-my-white rounded-lg overflow-hidden task_card">
               <div class="p-6 space-y-2">
                 <div class="badge bg-white">CloudSync</div>
                 <h2 class="text-xl text-gray-800 mb-2">Add Dark Mode</h2>
@@ -141,12 +143,12 @@
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info">Completed</button>
+                  <button class="btn btn-info completed-button">Completed</button>
                 </div>
               </div>
             </div>
             <!-- card 3 -->
-            <div class="bg-my-white rounded-lg overflow-hidden">
+            <div class="bg-my-white rounded-lg overflow-hidden task_card">
               <div class="p-6 space-y-2">
                 <div class="badge bg-white">SwiftPay</div>
                 <h2 class="text-xl text-gray-800 mb-2">Optimize Home page </h2>
@@ -173,12 +175,12 @@
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info">Completed</button>
+                  <button class="btn btn-info completed-button">Completed</button>
                 </div>
               </div>
             </div>
             <!-- card 4 -->
-            <div class="bg-my-white rounded-lg overflow-hidden">
+            <div class="bg-my-white rounded-lg overflow-hidden task_card">
               <div class="p-6 space-y-2">
                 <div class="badge bg-white">Meta</div>
                 <h2 class="text-xl text-gray-800 mb-2">Add new emoji 🤲</h2>
@@ -205,12 +207,12 @@
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info">Completed</button>
+                  <button class="btn btn-info completed-button">Completed</button>
                 </div>
               </div>
             </div>
             <!-- card 5 -->
-            <div class="bg-my-white rounded-lg overflow-hidden">
+            <div class="bg-my-white rounded-lg overflow-hidden task_card">
               <div class="p-6 space-y-2">
                 <div class="badge bg-white">Google LLC</div>
                 <h2 class="text-xl text-gray-800 mb-2">Integrate OpenAI API</h2>
@@ -238,12 +240,12 @@
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info">Completed</button>
+                  <button class="btn btn-info completed-button">Completed</button>
                 </div>
               </div>
             </div>
             <!-- card 6 -->
-            <div class="bg-my-white rounded-lg overflow-hidden">
+            <div class="bg-my-white rounded-lg overflow-hidden task_card">
               <div class="p-6 space-y-2">
                 <div class="badge bg-white">Glassdoar</div>
                 <h2 class="text-xl text-gray-800 mb-2">
@@ -273,7 +275,7 @@
                     <p class="text-sm">Deadline</p>
                     <p class="font-medium">01 April 2025</p>
                   </div>
-                  <button class="btn btn-info">Completed</button>
+                  <button class="btn btn-info completed-button">Completed</button>
                 </div>
               </div>
             </div>
