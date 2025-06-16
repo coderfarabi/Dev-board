@@ -1,4 +1,1 @@
-nsole.log(`
-  //   ${now.toLocaleDateString(undefined, dateOptions)}<br>
-  //   ${now.toLocaleTimeString(undefined, timeOptions)}
-  // `);
+document.getElementById("live_date").innerText = `${now.toDateString(undefined, dateOptions)}`;

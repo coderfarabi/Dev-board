@@ -6,5 +6,7 @@ function updatedDate () {
     month: 'long', 
     day: 'numeric' 
   };
-  document.getElementById("liveTime").innerText = `${now.toDateString(undefined, dateOptions)}`;
+
+  document.getElementById("live_date").innerText = `${now.toDateString(undefined, dateOptions)}`;
+  // console.log(now.toDateString(undefined, dateOptions));
 }
