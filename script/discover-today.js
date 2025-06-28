@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // clicking on the logo/home button
   document.getElementById("brand-logo").addEventListener("click", () => {
-    window.location.href = "/index.html";
+    window.location.href = "index.html";
   });
 
   document.getElementById("backToDesk").addEventListener("click", () => {
-    window.location.href = "/index.html";
+    window.location.href = "index.html";
   });
 });
