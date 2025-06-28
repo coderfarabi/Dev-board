@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // clicking on the logo/home button
   document.getElementById("brand-logo").addEventListener("click", () => {
-    window.location.href = "/index.html";
+    window.location.href = "index.html";
   });
   
 
   // clicking on the "Discover Today" button
   document.getElementById("discover-today").addEventListener("click", () => {
-    window.location.href = "/html/discover-today.html";
+    window.location.href = "html/discover-today.html";
   });
 
 
