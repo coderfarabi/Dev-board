@@ -44,6 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   });
 
+  document.getElementById('rendom_color').addEventListener('click', () =>{
+    // alert();
+    document.getElementById('body').style.backgroundColor=getRandomRGBColor();
+
+  })
   
   
 });
