@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // clicking on the "Discover Today" button
   document.getElementById("discover-today").addEventListener("click", () => {
-    window.location.href = "html/discover-today.html";
+    window.location.href = "discover-today.html";
   });
 
 
