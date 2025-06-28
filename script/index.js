@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // clicking on the logo/home button
   document.getElementById("brand-logo").addEventListener("click", () => {
-    window.location.href = "/html/index.html";
+    window.location.href = "/index.html";
   });
   
 
@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById('rendom_color').addEventListener('click', () =>{
-    // alert();
     document.getElementById('body').style.backgroundColor=getRandomRGBColor();
 
   })

@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>discover-today</title>
-</head>
-<body>
-  hello world
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>discover-today</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="/script/tailwind.config.js"></script>
+    <script src="/utilities/utilities.js"></script>
+    <script src="/script/discover-today.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-my-white: #f4f7ff;
+        --color-my-text: #00303c;
+        --color-my-fev: #3752fd;
+        --color-my-fev-h: #0220ec;
+      }
+    </style>
+  </head>
+  <body class="bg-my-white p-6 text-my-text" id="body">
+    <div class="space-y-5">
+      <header class="bg-white p-5 rounded-lg">
+        <nav class="flex items-center justify-between space-x-2">
+          <div
+            id="brand-logo"
+            class="flex cursor-pointer items-center space-x-1"
+          >
+            <img src="/assets/logo.png" alt="" />
+            <p class="text-2xl">Dev<span class="font-bold">Board</span></p>
+          </div>
+          <div class="flex items-center space-x-5">
+            <div
+              id="backToDesk"
+              class="flex col-span-2 items-center p-5 rounded-lg space-x-2 justify-center bg-my-fev cursor-pointer hover:bg-my-fev-h hover:scale-102 hover:bg-indigo-600 hover:shadow-2xl transition-all duration-200 py-2 px-6 rounded-lg"
+            >
+              <p class="text-white">Back to Desk</p>
+            </div>
+            <div id="rendom_color" class="cursor-pointer">
+              <img src="/assets/theme-btn.png" alt="" />
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="justify-items-center">
+        <div class="flex flex-col w-32 space-y-3">
+          <p class="font-bold text-center text-2xl">
+            Blogs
+          </p>
+          <div class="pt-1.5 bg-my-fev rounded"></div>
+        </div>
+      </div>
+      <main class="space-y-3">
+        <!-- Question-1 -->
+        <div class="bg-white p-5 rounded-lg space-y-3">
+          <p class="font-bold">Question-1: What are the different ways to select an element in the DOM?</p>
+          <div class="pt-0.5 bg-my-fev rounded"></div>
+          <p>getElementById,getElementsByClassName,getElementsByTagName,querySelector,querySelectorAll</p>
+        </div>
+        <!-- Question-2 -->
+        <div class="bg-white p-5 rounded-lg space-y-3">
+          <p class="font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent?</p>
+          <div class="pt-0.5 bg-my-fev rounded"></div>
+          <p>innerHTML:<br/>The HTML content (including tags and text) within an element. <br>
+          innerText: <br> The rendered visible text content of an element. <br>
+          textContent: <br> The raw text content of an element, including all text within its descendant nodes (even hidden elements, script tags, and style tags). <br>
+          </p>
+        </div>
+        <!-- Question-3 -->
+        <div class="bg-white p-5 rounded-lg space-y-3">
+          <p class="font-bold">Question-1: What are the different ways to select an element in the DOM?</p>
+          <div class="pt-0.5 bg-my-fev rounded"></div>
+          <p>getElementById,getElementsByClassName,getElementsByTagName,querySelector,querySelectorAll</p>
+        </div>
+        <!-- Question-4 -->
+        <div class="bg-white p-5 rounded-lg space-y-3">
+          <p class="font-bold">Question-1: What are the different ways to select an element in the DOM?</p>
+          <div class="pt-0.5 bg-my-fev rounded"></div>
+          <p>getElementById,getElementsByClassName,getElementsByTagName,querySelector,querySelectorAll</p>
+        </div>
+        <!-- Question-5 -->
+        <div class="bg-white p-5 rounded-lg space-y-3">
+          <p class="font-bold">Question-1: What are the different ways to select an element in the DOM?</p>
+          <div class="pt-0.5 bg-my-fev rounded"></div>
+          <p>getElementById,getElementsByClassName,getElementsByTagName,querySelector,querySelectorAll</p>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
